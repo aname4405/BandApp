@@ -13,7 +13,7 @@ import com.qa.springbootbackend.repository.BuyerRepository;
 public class BuyerServiceImpl implements BuyerService {
     
     @Autowired
-    BuyerRepository buyerRepository;
+    private BuyerRepository buyerRepository;
 
 
     @Override

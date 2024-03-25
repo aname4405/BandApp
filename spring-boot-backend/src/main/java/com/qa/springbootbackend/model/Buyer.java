@@ -13,7 +13,7 @@ public class Buyer {
 
     @Id
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "buyer_id")
+    @Column(name = "buyer_id", nullable = false)
     private long  id;
     private String first_name;
     private String last_name;
@@ -21,6 +21,13 @@ public class Buyer {
 
     public Buyer(){
 
+    }
+
+    public Buyer(long id, String first_name, String last_name, String email) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email; 
     }
 
     public long getId()  {
@@ -55,10 +62,9 @@ public class Buyer {
         this.email = email;
     }
 
-    // @Override
-    // public String toString() {
-    //     // TODO Auto-generated method stub
-    //     return super.toString();
-    // }
-    
+    @Override
+    public String toString() {
+        return "Buyer: [id=" + id + ", first_name=" + first_name +", last_name=" + last_name + ", email=" + email + "]";
+    }
+   
 }

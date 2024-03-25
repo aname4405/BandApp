@@ -8,7 +8,7 @@ import java.util.Optional;
 
 import com.qa.springbootbackend.service.BuyerService;
 import com.qa.springbootbackend.model.Buyer;
-import org.springframework.web.bind.annotation.RequestParam;
+// import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -21,11 +21,7 @@ public class BuyerController {
     @Autowired
     BuyerService service;
 
-    @GetMapping("/getAllBuyers")
-    public String getMethodName() {
-        return new String();
-    }
-    
+    @GetMapping("/getAllBuyers") 
     public List<Buyer> getAllBuyers(){
         return service.getAllBuyers();
     }
