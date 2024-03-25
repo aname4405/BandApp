@@ -7,7 +7,7 @@ const addBuyerUrl = "localhost:8080/saveBuyer";
 const updateBuyer = "localhost:8080/updateBuyer";
 const deleteBuyer = "localhost:8080/deleteBuyer/";
 
-class BuyerServcice{
+class BuyerService{
 
     getAllBuyers(){
         return axios.get(getAllBuyersUrl);
@@ -30,4 +30,4 @@ class BuyerServcice{
     }
 
 }
-export default new BuyerServcice();
+export default new BuyerService();
