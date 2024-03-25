@@ -34,8 +34,8 @@ public class BuyerServiceImpl implements BuyerService {
     @Override
     public Buyer updateBuyer(Buyer buyer) {
         Buyer buyerTemp = buyerRepository.findById(buyer.getId()).get();
-        buyerTemp.setFirst_name(buyer.getFirst_name());
-        buyerTemp.setLast_name(buyer.getLast_name());
+        buyerTemp.setFirstName(buyer.getFirstName());
+        buyerTemp.setLastName(buyer.getLastName());
         buyerTemp.setEmail(buyer.getEmail());
         return buyerRepository.save(buyerTemp);
     }

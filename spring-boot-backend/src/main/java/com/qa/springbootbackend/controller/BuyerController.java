@@ -3,6 +3,8 @@ package com.qa.springbootbackend.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -20,12 +22,8 @@ public class BuyerController {
 
     @Autowired
     BuyerService service;
-
-    @GetMapping("/getAllBuyers")
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
     
+    @GetMapping("/getAllBuyers")
     public List<Buyer> getAllBuyers(){
         return service.getAllBuyers();
     }
@@ -35,6 +33,7 @@ public class BuyerController {
         return service.getBuyer(id);
     }
 
+    @Validated
     @PostMapping("/saveBuyer")
     public Buyer saveBuyer(@RequestBody Buyer buyer){
         return service.saveBuyer(buyer);
