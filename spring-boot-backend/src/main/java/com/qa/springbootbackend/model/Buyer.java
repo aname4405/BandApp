@@ -4,15 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name="buyers")
 public class Buyer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "buyer_id")
     private long  id;
     private String first_name;
@@ -55,10 +55,10 @@ public class Buyer {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
+    // @Override
+    // public String toString() {
+    //     // TODO Auto-generated method stub
+    //     return super.toString();
+    // }
     
 }

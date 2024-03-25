@@ -22,7 +22,7 @@ public class BuyerController {
     BuyerService service;
 
     @GetMapping("/getAllBuyers")
-    public String getMethodName(@RequestParam String param) {
+    public String getMethodName() {
         return new String();
     }
     

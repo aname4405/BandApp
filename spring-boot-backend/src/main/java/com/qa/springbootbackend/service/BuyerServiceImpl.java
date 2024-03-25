@@ -40,6 +40,7 @@ public class BuyerServiceImpl implements BuyerService {
         return buyerRepository.save(buyerTemp);
     }
 
+    @SuppressWarnings("null")
     @Override
     public Buyer saveBuyer(Buyer buyer) {
         return buyerRepository.save(buyer);
