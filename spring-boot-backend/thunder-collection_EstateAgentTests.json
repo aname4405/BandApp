@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "EstateAgentTests",
+    "dateExported": "2024-04-18T18:30:44.114Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "261618cc-e431-4022-99b4-0cf44c7b0b35",
+            "colId": "4fd78bf2-7c24-4404-a2e7-8b5b6cd08d55",
+            "containerId": "",
+            "name": "getAllBuyers",
+            "url": "localhost:8080/getAllBuyers",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-25T11:44:43.636Z",
+            "modified": "2024-03-25T11:44:57.584Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5284e0b2-487e-4115-a5e9-cb60068d6e58",
+            "colId": "4fd78bf2-7c24-4404-a2e7-8b5b6cd08d55",
+            "containerId": "",
+            "name": "saveBuyer",
+            "url": "localhost:8080/saveBuyer",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-25T11:45:04.626Z",
+            "modified": "2024-04-18T17:18:24.512Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"hello_first\",\n  \"last_name\": \"world_first\",\n  \"email\": \"hello_first@world.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

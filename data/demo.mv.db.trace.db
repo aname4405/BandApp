@@ -1,9 +1,0 @@
-2024-03-25 14:43:42.725879Z jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
-select b1_0.buyer_id,b1_0.email,b1_0.first_name,b1_0.last_name from buyers b1_0 [42104-224]
-2024-03-25 14:48:37.840095Z jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
-select b1_0.buyer_id,b1_0.email,b1_0.first_name,b1_0.last_name from buyers b1_0 [42104-224]
-2024-03-25 14:49:18.948252Z jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
-select b1_0.buyer_id,b1_0.email,b1_0.first_name,b1_0.last_name from buyers b1_0 where b1_0.buyer_id=? [42104-224]

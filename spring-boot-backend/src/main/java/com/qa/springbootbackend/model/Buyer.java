@@ -3,17 +3,17 @@ package com.qa.springbootbackend.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
+import jakarta.validation.constraints.NotNull;
+// import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name="buyers")
 public class Buyer {
 
-    @Id
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @NotNull
+    // @Column(name = "id", nullable = false)
     private long  id;
     private String first_name;
     private String last_name;
