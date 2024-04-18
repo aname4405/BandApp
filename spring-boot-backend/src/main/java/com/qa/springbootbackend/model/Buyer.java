@@ -13,7 +13,7 @@ public class Buyer {
 
     @Id
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "buyer_id", nullable = false)
+    @Column(name = "id", nullable = false)
     private long  id;
     private String first_name;
     private String last_name;

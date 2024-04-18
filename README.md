@@ -20,3 +20,10 @@ https://trello.com/invite/b/iXD1Xy0S/ATTI0251b413fbaccc2912918da9339678b709BC305
 
 Swagger URL Link:
 http://localhost:8080/swagger-ui/index.html
+
+
+Running backend:
+
+Commandline (linux/mac): `./mvnw spring-boot:run`
+VSCode (with debugging): Use "Run and Debug" on the toolbar, select `Spring Boot-SpringBootBackendApplication<spring-boot-backend>` configuration
+
