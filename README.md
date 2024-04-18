@@ -53,6 +53,26 @@ Move into the frontend project: `cd front-end`
 
 Start the application using: `npm start`
 
+## Docker
+
+### Front End
+
+Docker file located: `react-frontend/Dockerfile`
+
+Build command: `docker build -t react-frontend .`
+
+Run command: `docker run -p 3000:3000 react-frontend`
+
+### Back End
+
+> Note: to be created!!
+
+Docker file located: `spring-boot-backend/Dockerfile`
+
+Build command: `docker build -t spring-boot-backend .`
+
+Run command: `docker run -p 8080:8080 spring-boot-backend`
+
 ## Other notes
 
 QA FASE Link:
