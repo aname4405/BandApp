@@ -5,6 +5,7 @@ let ViewBuyers = () => {
         buyers: []
     });
     console.log("hello")
+    
     useEffect(()=>{
         console.log("hello2")
         BuyerService.getAllBuyers().then((response)=>{
@@ -13,14 +14,15 @@ let ViewBuyers = () => {
                 buyers : response.data
             }));
         }, ()=>{});        
-    },[]);
+    },
+    []
+    );
 
     console.log(JSON.stringify(state.buyers))
 
     return (
         <>
-        <table className="buyerTable">
-            <thread className="buyerThread">
+        <table>
                 <tr>
                     <th>ID</th>
                     <th>First Name</th>
@@ -28,15 +30,13 @@ let ViewBuyers = () => {
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
-            </thread>
-            <tbody>
                 {
               state.buyers.map((buyer, i)=>{
                 return(
                     <tr>
                         <td>{buyer.id}</td>
-                        <td>{buyer.firstName}</td>
-                        <td>{buyer.lastName}</td>
+                        <td>{buyer.first_name}</td>
+                        <td>{buyer.last_name}</td>
                         <td>{buyer.email}</td>
 
                         <td>
@@ -48,7 +48,6 @@ let ViewBuyers = () => {
               })
 
                 }
-            </tbody>
         </table>
         <button className="btn-success">Add Buyer</button>
         </>
