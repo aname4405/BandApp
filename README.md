@@ -55,6 +55,10 @@ Start the application using: `npm start`
 
 ## Docker
 
+### compose
+
+docker-compose up
+
 ### Front End
 
 Docker file located: `react-frontend/Dockerfile`
@@ -64,8 +68,6 @@ Build command: `docker build -t react-frontend .`
 Run command: `docker run -p 3000:3000 react-frontend`
 
 ### Back End
-
-> Note: to be created!!
 
 Docker file located: `spring-boot-backend/Dockerfile`
 
