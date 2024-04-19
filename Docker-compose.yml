@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  backend:
+    image: "spring-boot-backend"
+    container_name: EstateAgent-backendend
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: "react-frontend"
+    container_name: EstateAgent-frontend
+    ports:
+      - "3000:3000"
