@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import BuyerService from "../service/BuyerService";
 let ViewBuyers = () => {
     let [state, setState] = useState({
@@ -20,6 +21,21 @@ let ViewBuyers = () => {
 
     console.log(JSON.stringify(state.buyers))
 
+let navigate = useNavigate();
+
+let handleAddBuyer = () => {
+    navigate({pathname : '/AddBuyer'})
+}
+
+let handleUpdate = (id) => {
+    navigate('/UpdateBuyer', {state : {id}});    
+}
+
+let handleDelete = (id) => {
+    navigate('/DeleteBuyer', {state : {id}});
+    
+}
+
     return (
         <>
         <table>
@@ -40,8 +56,8 @@ let ViewBuyers = () => {
                         <td>{buyer.email}</td>
 
                         <td>
-                            <button className="btn-update">Update</button>
-                            <button className="btn-delete">Delete</button>
+                            <button className="btn-update" onClick={()=>{{handleUpdate(buyer.id)}}}>Update</button>
+                            <button className="btn-delete" onClick={()=>{{handleDelete(buyer.id)}}}>Delete</button>
                         </td>
                     </tr>
                 )
@@ -49,7 +65,7 @@ let ViewBuyers = () => {
 
                 }
         </table>
-        <button className="btn-success">Add Buyer</button>
+        <button className="btn-success" onClick={handleAddBuyer}>Add Buyer</button>
         </>
     );
 }

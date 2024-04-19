@@ -4,8 +4,8 @@ import axios from 'axios';
 const getAllBuyersUrl = "http://localhost:8080/getAllBuyers";
 const findBuyerUrl = "http://localhost:8080/getBuyer/";
 const addBuyerUrl =  "http://localhost:8080/saveBuyer";
-const updateBuyer =  "http://localhost:8080/updateBuyer";
-const deleteBuyer =  "http://localhost:8080/deleteBuyer/";
+const updateBuyerUrl =  "http://localhost:8080/updateBuyer";
+const deleteBuyerUrl =  "http://localhost:8080/deleteBuyer/";
 
 class BuyerService{
 
@@ -13,20 +13,20 @@ class BuyerService{
         return axios.get(getAllBuyersUrl);
     }
 
-    findBuyer(){
-
+    findBuyer(id){
+        return axios.get(findBuyerUrl+id);        
     }
 
     addBuyer(){
-
+        return axios.post(addBuyerUrl, buyer);
     }
 
     updateBuyer(){
 
     }
 
-    deleteBuyer(){
-
+    deleteBuyer(id){
+        return axios.delete(deleteBuyerUrl+id);
     }
 
 }
