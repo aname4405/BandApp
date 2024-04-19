@@ -17,12 +17,12 @@ class BuyerService{
         return axios.get(findBuyerUrl+id);        
     }
 
-    addBuyer(){
+    addBuyer(buyer){
         return axios.post(addBuyerUrl, buyer);
     }
 
-    updateBuyer(){
-
+    updateBuyer(buyer){
+        return axios.put(updateBuyerUrl, buyer);
     }
 
     deleteBuyer(id){

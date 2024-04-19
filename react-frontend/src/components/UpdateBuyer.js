@@ -29,10 +29,9 @@ let UpdateBuyer = () => {
     let handleSubmit =(e) => {
         e.preventDefault();
 
-        let buyer = {first_name : first_name, last_name : last_name, email : email}
-        // alert(JSON.stringify(buyer)) //to test 
+        let buyer = {id : location.state.id, first_name : first_name, last_name : last_name, email : email}
 
-        BuyerService.addBuyer(buyer).then(()=>{
+        BuyerService.updateBuyer(buyer).then(()=>{
             alert("Buyer has been updated successfully!")
             navigate({pathname : '/'});
         }, ()=>{
