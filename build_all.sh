@@ -7,7 +7,7 @@ FRONTEND="react-frontend"
 pushd $BACKEND
 
 # build app
-mvn clean install
+# mvn clean install
 mvn package
 
 # build docker image
@@ -15,9 +15,9 @@ docker build -t spring-boot-backend:latest .
 
 popd
 
-pushd $FRONTEND
+# pushd $FRONTEND
 
-# build containerise app
-docker build -t react-frontend:latest .
+# # build containerise app
+# docker build -t react-frontend:latest .
 
-popd
+# popd

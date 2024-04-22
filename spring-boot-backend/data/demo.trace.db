@@ -1,0 +1,80 @@
+2024-04-22 20:46:16.323807+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE BUYERS(id LONG PRIMARY KEY AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255))\000d\000a[*]INSERT INTO BUYERS VALUES(0,'Clark', 'Kent', 'superdude@gmail.com')"; SQL statement:
+CREATE TABLE BUYERS(id LONG PRIMARY KEY AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255))
+INSERT INTO BUYERS VALUES(0,'Clark', 'Kent', 'superdude@gmail.com') [42000-224]
+2024-04-22 20:46:16.325781+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
+INSERT INTO BUYERS VALUES(1, 'Bruce', 'Wayne', 'darkwing@gmail.com') [42104-224]
+2024-04-22 20:46:16.326959+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
+INSERT INTO BUYERS VALUES(2, 'Peter', 'Parker', 'wallcrawler@gmail.com') [42104-224]
+2024-04-22 20:46:16.328028+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
+INSERT INTO BUYERS VALUES(3, 'Eddie', 'Brock', 'we.are.venom@gmail.com') [42104-224]
+2024-04-22 20:46:16.328953+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUYERS" not found (this database is empty); SQL statement:
+INSERT INTO BUYERS VALUES(4, 'Wally', 'West', 'flash@gmail.com') [42104-224]
+2024-04-22 20:50:46.116998+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1529)
+	at org.h2.mvstore.FileStore.lambda$serializeAndStore$3(FileStore.java:1432)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 12 more
+Caused by: org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	... 7 more
+Caused by: java.lang.AssertionError: 20480 != 16384
+	at org.h2.mvstore.RandomAccessStore.shrinkStoreIfPossible(RandomAccessStore.java:679)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:377)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:28)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1524)
+	... 6 more
+2024-04-22 20:50:48.628034+01:00 database: could not close the database
+org.h2.message.DbException: General error: "General error: ""org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]"" [50000-224]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.engine.Database.close(Database.java:1183)
+	at org.h2.engine.Database.onShutdown(Database.java:1159)
+	at org.h2.engine.OnExitDatabaseCloser.onShutdown(OnExitDatabaseCloser.java:85)
+	at org.h2.engine.OnExitDatabaseCloser.run(OnExitDatabaseCloser.java:114)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "General error: ""org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]"" [50000-224]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 5 more
+Caused by: org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1529)
+	at org.h2.mvstore.FileStore.lambda$serializeAndStore$3(FileStore.java:1432)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 12 more
+Caused by: org.h2.mvstore.MVStoreException: java.lang.AssertionError: 20480 != 16384 [2.2.224/3]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	... 7 more
+Caused by: java.lang.AssertionError: 20480 != 16384
+	at org.h2.mvstore.RandomAccessStore.shrinkStoreIfPossible(RandomAccessStore.java:679)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:377)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:28)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1524)
+	... 6 more

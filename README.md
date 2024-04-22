@@ -32,9 +32,15 @@ Once the springboot app is running, browse to `localhost:8080/h2-console/login.d
 
 Then paste the following into the SQL Statement panel:
 
+> if you've already created the table use `DROP TABLE BUYERS;` first
+
 ```sql
-DROP TABLE BUYERS;
-CREATE TABLE BUYERS(id LONG PRIMARY KEY AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255))
+CREATE TABLE BUYERS(id LONG PRIMARY KEY AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255));
+INSERT INTO BUYERS VALUES(0,'Clark', 'Kent', 'superdude@gmail.com');
+INSERT INTO BUYERS VALUES(1, 'Bruce', 'Wayne', 'darkwing@gmail.com');
+INSERT INTO BUYERS VALUES(2, 'Peter', 'Parker', 'wallcrawler@gmail.com');
+INSERT INTO BUYERS VALUES(3, 'Eddie', 'Brock', 'we.are.venom@gmail.com');
+INSERT INTO BUYERS VALUES(4, 'Wally', 'West', 'flash@gmail.com');
 ```
 
 ### Running backend:
