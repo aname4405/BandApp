@@ -26,7 +26,7 @@ Spring boot app that hosts an in-memory table using H2 and manages buyers.
 
 Once the springboot app is running, browse to `localhost:8080/h2-console/login.do` and fill in the following:
 * DriverClass: `org.h2.Driver`
-* JDBC URL: `jdbc:h2:/<path_to_repo>/data/demo`
+* JDBC URL: `jdbc:h2:/data/demo`
 * Username: `sa`
 * Password: 
 
